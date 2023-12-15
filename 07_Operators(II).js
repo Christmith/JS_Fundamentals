@@ -123,6 +123,21 @@ console.log(user.age); // -> undefined
 console.log(true ? "Alice" : "Bob"); // -> Alice
 console.log(false ? "Alice" : "Bob"); // -> Bob
 
+/*-----------------------------------------------Precedence------------------------------------*/
+
+let a = 10;
+let b = a + 2 * 3;
+let c = a + 2  < 20 - 15;
+console.log(a); // -> 10
+console.log(b); // -> 16
+console.log(c); // -> false
+
+let a, b;
+b = (a = (20 + 20) * 2) > (3 ** 2);
+console.log(a); // -> 80
+console.log(b); // -> true
+
+
 let name = 1 > 2 ? "Alice" : "Bob";
 console.log(name); // -> Bob
 
