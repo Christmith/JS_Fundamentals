@@ -101,4 +101,51 @@ let  message2  =  'Cyclone  "Cilida"  to  pass  close  to  Mauritius.';
 console.log(message1);  //  ->  The  vessel  'Mars'  called  at  the  port.
 console.log(message2);  //  ->  Cyclone  "Cilida"  to  pass  close  to  Mauritius.
 
+let  path  =  "C:\\Windows"  -  "Windows";
+console.log(path);  //  ->  NaN   
+let  test  =  "100"  -  "10";
+console.log(test);  //  ->  90
+console.log(typeof  test);  //  ->  number
+
+let  path1  =  "C:\\"  +  "Windows";
+console.log(path1);  //  ->  C:\Windows  
+let  test  =  "100"  +  "10";
+console.log(test);  //  ->  10010
+console.log(typeof  test);  //  ->  string
+
+let  country1  =  "Malawi";
+let  continent  =  "Africa"; 
+let  sentence  =  `  ${country1}  is  located  in  ${continent}.`;
+console.log(sentence);  //  ->  Malawi  is  located  in  Africa.
+
+let  str  =  "java  script  language";   
+console.log(str.length);  //  ->  20
+console.log('test'.length);  //  ->  4
+console.log(str.charAt(0));  //  ->  'j'
+console.log('abc'.charAt(1));  //  ->  'b'
+console.log(str.slice(0,  4));  //  ->  'java'
+console.log('test'.slice(1,  3));  //  ->  'es'
+console.log(str.split('  '));  //  ->  ['java',  'script',  'language']
+console.log('192.168.1.1'.split('.'));    //  ->  ['192',  '168',  '1',  '1']
+
+//  Undefined
+
+Let  declaredVar;
+console.log(typeof  declaredVar);  //  ->  undefined  
+declaredVar  =  5;
+console.log(typeof  declaredVar);  //  ->  number
+declaredVar  =  undefined;
+console.log(typeof  declaredVar);  //  ->  undefined
+The  undefined  value  can  also  be  returned  by  the  typeof  operator  when  a  non-existent  variable  is  used  as  an  argument.
+Console.log(typeof  notDeclaredVar);  //  ->  undefined
+console.log(notDeclaredVar);  //  ->  Uncaught  ReferenceError:  notDeclared  is  not  defined
+
+//  Null
+
+let  someResource;
+console.log(someResource);  //  ->  undefined
+console.log(typeof  someResource);  //  ->  undefined  
+someResource  =  null;
+console.log(someResource);  //  ->  null
+console.log(typeof  someResource);  //  ->  object
 
