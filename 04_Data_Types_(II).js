@@ -38,7 +38,6 @@ delete  user2.phone;
 console.log(user2.phone);  //  ->  undefined
 
 /*-----------Arrays-----------*/
-
 let  days  =  ["Sun",  "Mon",  "Tue",  "Wed",  "Thu",  "Fri",  "Sat"];
 console.log(days[0]);  //  ->  Sun
 console.log(days[2]);  //  ->  Tue
@@ -77,6 +76,13 @@ console.log(users[0].name);  //  ->  Calvin
 console.log(users[1].name);  //  ->  Mateus
 console.log(users[2].name);  //  ->  Irene
 
+
+let  days  =  ["Sun",  "Mon",  "Tue",  "Wed",  "Thu",  "Fri",  "Sat"];
+let day = "Sunday";
+console.log(typeof days); // -> object
+console.log(typeof day); // -> string
+console.log(days instanceof Array); // -> true
+console.log(day instanceof Array); // -> false
 
 
 
