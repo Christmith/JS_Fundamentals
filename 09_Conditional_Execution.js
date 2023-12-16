@@ -31,3 +31,21 @@ console.log(shippingCost);
 
 /*-------------------------The if ... else statement---------------------------*/
 
+let isUserReady = confirm("Are you ready?");
+if (isUserReady) {
+    console.log("User ready!");
+} 
+if (isUserReady == false) {
+    console.log("User not ready!");
+}
+
+let isUserReady = confirm("Are you ready?");
+if (isUserReady) {
+    console.log("User ready!");
+} else {
+    console.log("User not ready!");
+}
+
+
+/*---------------------------------The if … else … if statement------------------------------*/
+
