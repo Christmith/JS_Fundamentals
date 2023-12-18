@@ -100,3 +100,28 @@ if (win) {
     alert("Winner!");
 }
 
+let number1 = Number(prompt("Enter first number"));
+      let number2 = Number(prompt("Enter second number"));
+      let operand = prompt("Enter operand(+,-,*,/)");
+      let result = 0;
+      if (!Number.isNaN(number1) && !Number.isNaN(number2)) {
+        switch (operand) {
+          case "+":
+            number1 + number2;
+            break;
+          case "-":
+            number1 - number2;
+            break;
+          case "*":
+            number1 * number2;
+            break;
+          case "/":
+            number1 / number2;
+            break;
+          default:
+            alert("Invalid operand");
+        }
+      } else {
+        alert("Error:at least one of the inputs is not a number");
+      }
+      alert(result);
