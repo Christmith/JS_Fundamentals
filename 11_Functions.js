@@ -102,3 +102,20 @@ let day2 = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 
 console.log(`mean: ${getMeanTemp(day2)}`); // -> mean:
 18.083333333333332
 
+/*----------------------------Shadowing---------------------------------*/
+let a = 100, b = 200, c = 300;
+ 
+function test(a) {
+     let b = 10;
+     console.log(a); // parameter a
+     console.log(b); // local variable b
+     console.log(c); // global variable c
+}
+ 
+test(1);   // -> 1
+      // -> 10
+      // -> 300
+ 
+console.log(a); // -> 100
+console.log(b); // -> 200
+console.log(c); // -> 300
