@@ -181,3 +181,17 @@ inner 1
 inner 1
 inner 1
 inner 1 */
+
+/*------------------------- Arrow Function------------------------------------*/
+
+let add = function(a, b) {
+     return a + b;
+}
+console.log(add(10, 20)); // -> 30
+
+
+let add = (a, b) => {
+     return a + b;
+}
+console.log(add(10, 20)); // -> 30
+
