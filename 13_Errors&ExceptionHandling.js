@@ -47,3 +47,65 @@ try {
     }
 }
 console.log(a); // -> -2
+
+/*--------------------------------------------- The finally statement--------------------------------------------------*/
+
+let a = 10;
+try {
+    a = 5;
+} finally {
+    console.log(a); // -> 5
+}
+console.log(a); // -> 5
+
+
+let a = 10;
+try {
+    a = b;  // ReferenceError
+} finally {
+    console.log(a); // -> 10
+}
+console.log(a);
+
+let a = 10;
+try {
+    a = b;  // ReferenceError
+} catch (error) {
+    console.log("An Error!"); // -> An Error!
+} finally {
+    console.log("Finally!"); // -> Finally!
+}
+console.log(a); // -> 10
+
+// nested try catch finally blocks
+
+let a = 10;
+try {
+    a = b; // First ReferenceError
+} catch (error) {
+    try {
+        console.log(b); // Second ReferenceError
+    } catch {
+        console.log("Second catch!"); // -> Second catch!
+    }
+} finally {
+    console.log("Finally!"); // -> Finally!
+}
+
+
+/*------------------------------------------------The throw statement and custom errors---------------------------------------------*/
+
+Function factorial(n) {
+    if (n > 20) {
+        throw new RangeError("Max value 20");
+    }
+    let result = 1;
+    for (; n > 1; n--) {
+        result = result * n;
+    }
+    return result;
+}
+ 
+console.log(factorial(20)); // -> 2432902008176640000
+console.log(factorial(1000)); // -> Uncaught RangeError: Max value 20
+
